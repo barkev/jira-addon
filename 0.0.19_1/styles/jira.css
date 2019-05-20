@@ -1,0 +1,599 @@
+
+/* give non white background-color to kanban board */
+div#ghx-pool,
+#ghx-column-header-group.ghx-fixed,
+body:not(.adg3) .ghx-column-headers .ghx-column,
+.ghx-column-headers .ghx-column, .ghx-columns .ghx-column {
+    background-color: #efefef;
+    border-color: #efefef;
+}
+
+
+/* make the card "colour" cover the whole card */
+.ghx-issue .ghx-grabber {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: inherit;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+/* give cards a white background - it looks better when the grabber */
+.ghx-issue {
+    background-color: white;
+    border-color: #999;
+}
+
+.ghx-issue.ghx-selected {
+    background-color: #d9e9f9;
+}
+
+/* raise card content so it appear above the grabber */
+.ghx-issue section {
+    position: relative;
+    z-index: 1;
+}
+
+/* give cards a white background by default */
+.ghx-issue .ghx-grabber[style="background-color:#ededed;"] {
+    opacity: 0;
+}
+
+/* fix overlay div covering cards when moving card with drag-n-drop */
+.ghx-zone-overlay {
+    z-index: 2;
+}
+
+/* adjust swimlanes look */
+.ghx-swimlane-header {
+	border-top: 5px solid white;
+    border-bottom: 1px solid #ccc;
+    background-color: #e7e7e7;
+    width: 100%;
+}
+
+/* remove white gradient from swimlanes */
+.ghx-swimlane-header:after {
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+
+/* hide not so useful icons */
+.ghx-issue .ghx-field-icon[data-tooltip="Task"],
+.ghx-issue .ghx-field-icon[data-tooltip="Medium priority"] {
+    display: none;
+}
+
+/* make labels more visible */
+.ghx-issue .ghx-extra-field[data-tooltip~="Labels:"] {
+	font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+/* insert icon in front of labels */
+.ghx-issue .ghx-extra-field[data-tooltip~="Labels:"] span::before {
+    content: url(https://s3-eu-west-1.amazonaws.com/noths-prod-eu-west-1-emails/tag-icon.png);
+    vertical-align: sub;
+    padding-right: 4px;
+}
+
+/* hide when there are no labels */
+.ghx-issue .ghx-extra-field[data-tooltip="Labels: None"] {
+    display: none;
+}
+
+
+/* Makes the cursor a hand when mousing over swimlane header */
+#jira.ghx-sprint-support .ghx-swimlane-header .ghx-expander {
+	width: 100%;
+}
+
+
+/* Hides a bunch of unwanted stuff */
+#jira.ghx-sprint-support .ghx-end .aui-badge,
+#jira.ghx-sprint-support .ghx-flags,
+#jira.ghx-sprint-support .ghx-issue .ghx-highlighted-fields,
+#jira.ghx-sprint-support .ghx-move-count,
+#jira.ghx-sprint-support .ghx-swimlane.ghx-closed .ghx-columns,
+#jira.ghx-sprint-support #ghx-board-name,
+#jira.ghx-sprint-support #ghx-header .ghx-sprint-goal,
+body#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-type,
+#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-issue.ghx-narrow-card .ghx-stat-fields > .ghx-row.ghx-stat-1, .ghx-field.ghx-field-icon,
+#jira.ghx-sprint-support:not(.ghx-mode-planning) #breadcrumbs-container {
+    display: none;
+}
+
+.ghx-estimate {
+    visibility: hidden;
+}
+
+
+/* Makes the squares have rounded edges */
+:root {
+    --issue-border-radius: 3px;
+}
+
+
+/* Reduce space between left menu and swimlanes a bit */
+#jira #content {
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+/* Lowers the header at the very top of the page a bit */
+#jira.ghx-sprint-support #ghx-header {
+    padding: 10px 0 0 0;
+}
+
+/* Changes the cards */
+#jira.ghx-sprint-support .ghx-issue {
+    background: none;
+    border-radius: var(--issue-border-radius);
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    font-size: 12px;
+    height: 104px !important;
+    justify-content: space-between;
+    margin: 4px;
+    padding: 4px 6px 4px 8px;
+    width: 110px !important;
+}
+
+    #jira.ghx-sprint-support .ghx-issue.ui-sortable-helper {
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.15);
+        cursor: -webkit-grabbing;
+    }
+
+    body#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-issue.ghx-selected {
+        box-shadow: 0 0 0px 2px #109eec;
+    }
+
+/* Changes task id style */
+#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-swimlane .ghx-key {
+    bottom: 5px;
+    color: #555;
+    display: flex;
+    flex: 1 0 auto;
+    font-size: 10px;
+    line-height: 1;
+    margin-right: 0;
+    position: absolute;
+    right: 6px;
+    text-align: right;
+    width: auto;
+    z-index: 1;
+}
+
+/* Moves avatar icon */
+#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-issue .ghx-avatar-img {
+    bottom: 0px;
+    height: 20px;
+    position: absolute;
+    left: 0px;
+    width: 20px;
+    z-index: 2;
+}
+
+/* Increases card text area */
+#jira.ghx-sprint-support .ghx-issue .ghx-summary {
+    display: -webkit-box;
+    flex: 1 0 auto;
+    font-size: 12px;
+    max-height: 80px;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    z-index: 1;
+}
+
+/* Moves swimlane expand arrow */
+.ghx-iconfont.aui-icon.aui-icon-small.aui-iconfont-expanded {
+    margin-left: 2px;
+    margin-top: 9px;
+}
+
+/* Changes swimlane header font */
+#jira.ghx-sprint-support .ghx-swimlane-header {
+    font-size: 12px;
+    padding-left: 22px;
+}
+
+    #jira.ghx-sprint-support .ghx-swimlane-header .ghx-heading {
+        margin: 6px 0;
+    }
+
+        #jira.ghx-sprint-support .ghx-swimlane-header .ghx-heading span {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+
+/* Removes strikeout on done tasks */
+#jira.ghx-sprint-support:not(.ghx-mode-planning) .js-issue.ghx-done .ghx-key {
+    text-decoration: none;
+}
+
+
+/* Change swimlane background, Hides the spacing between columns  */
+#jira.ghx-sprint-support .ghx-swimlane {
+    background: #f4f5f7;
+}
+
+/* Gives columns min width and a separator */
+#jira.ghx-sprint-support .ghx-columns .ghx-column {
+    background: none;
+    border-radius: 0;
+    min-width: 121px;
+    max-width: 25%;
+    width: auto;
+    border-right: 1px solid #e6e7ed;
+    padding: 5px 4px 5px 3px;
+}
+
+
+
+/* Hides top column headers (since they'll be inside swimlanes) */
+#jira.ghx-sprint-support #ghx-column-header-group {
+    display: none;
+}
+
+#jira.ghx-sprint-support #ghx-pool {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0 !important;
+    margin-right: 14px;
+}
+
+/* Adds column headers inside swimlanes. I guess they have to be hardcoded? */
+#jira.ghx-sprint-support .ghx-column:nth-child(1):before {
+    content: "To do";
+}
+
+#jira.ghx-sprint-support .ghx-column:nth-child(2):before {
+    content: "In progress";
+}
+
+#jira.ghx-sprint-support .ghx-column:nth-child(3):before {
+    content: "PR";
+}
+
+#jira.ghx-sprint-support .ghx-column:nth-child(4):before {
+    content: "QA";
+}
+/* give non white background-color to kanban board */
+div#ghx-pool,
+#ghx-column-header-group.ghx-fixed,
+body:not(.adg3) .ghx-column-headers .ghx-column,
+.ghx-column-headers .ghx-column, .ghx-columns .ghx-column {
+    background-color: #efefef;
+    border-color: #efefef;
+}
+
+
+/* make the card "colour" cover the whole card */
+.ghx-issue .ghx-grabber {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: inherit;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+/* give cards a white background - it looks better when the grabber */
+.ghx-issue {
+    background-color: white;
+    border-color: #999;
+}
+
+.ghx-issue.ghx-selected {
+    background-color: #d9e9f9;
+}
+
+/* raise card content so it appear above the grabber */
+.ghx-issue section {
+    position: relative;
+    z-index: 1;
+}
+
+/* give cards a white background by default */
+.ghx-issue .ghx-grabber[style="background-color:#ededed;"] {
+    opacity: 0;
+}
+
+/* fix overlay div covering cards when moving card with drag-n-drop */
+.ghx-zone-overlay {
+    z-index: 2;
+}
+
+/* adjust swimlanes look */
+.ghx-swimlane-header {
+	border-top: 5px solid white;
+    border-bottom: 1px solid #ccc;
+    background-color: #e7e7e7;
+    width: 100%;
+}
+
+/* remove white gradient from swimlanes */
+.ghx-swimlane-header:after {
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+
+/* hide not so useful icons */
+.ghx-issue .ghx-field-icon[data-tooltip="Task"],
+.ghx-issue .ghx-field-icon[data-tooltip="Medium priority"] {
+    display: none;
+}
+
+/* make labels more visible */
+.ghx-issue .ghx-extra-field[data-tooltip~="Labels:"] {
+	font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+/* insert icon in front of labels */
+.ghx-issue .ghx-extra-field[data-tooltip~="Labels:"] span::before {
+    content: url(https://s3-eu-west-1.amazonaws.com/noths-prod-eu-west-1-emails/tag-icon.png);
+    vertical-align: sub;
+    padding-right: 4px;
+}
+
+/* hide when there are no labels */
+.ghx-issue .ghx-extra-field[data-tooltip="Labels: None"] {
+    display: none;
+}
+
+
+/* Makes the cursor a hand when mousing over swimlane header */
+#jira.ghx-sprint-support .ghx-swimlane-header .ghx-expander {
+	width: 100%;
+}
+
+
+/* Hides a bunch of unwanted stuff */
+#jira.ghx-sprint-support .ghx-end .aui-badge,
+#jira.ghx-sprint-support .ghx-flags,
+#jira.ghx-sprint-support .ghx-issue .ghx-highlighted-fields,
+#jira.ghx-sprint-support .ghx-move-count,
+#jira.ghx-sprint-support .ghx-swimlane.ghx-closed .ghx-columns,
+#jira.ghx-sprint-support #ghx-board-name,
+#jira.ghx-sprint-support #ghx-header .ghx-sprint-goal,
+body#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-type,
+#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-issue.ghx-narrow-card .ghx-stat-fields > .ghx-row.ghx-stat-1, .ghx-field.ghx-field-icon,
+#jira.ghx-sprint-support:not(.ghx-mode-planning) #breadcrumbs-container {
+    display: none;
+}
+
+.ghx-estimate {
+    visibility: hidden;
+}
+
+
+/* Makes the squares have rounded edges */
+:root {
+    --issue-border-radius: 3px;
+}
+
+
+/* Reduce space between left menu and swimlanes a bit */
+#jira #content {
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+/* Lowers the header at the very top of the page a bit */
+#jira.ghx-sprint-support #ghx-header {
+    padding: 10px 0 0 0;
+}
+
+/* Changes the cards */
+#jira.ghx-sprint-support .ghx-issue {
+    background: none;
+    border-radius: var(--issue-border-radius);
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    font-size: 12px;
+    height: 104px !important;
+    justify-content: space-between;
+    margin: 4px;
+    padding: 4px 6px 4px 8px;
+    width: 110px !important;
+}
+
+    #jira.ghx-sprint-support .ghx-issue.ui-sortable-helper {
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.15);
+        cursor: -webkit-grabbing;
+    }
+
+    body#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-issue.ghx-selected {
+        box-shadow: 0 0 0px 2px #109eec;
+    }
+
+/* Changes task id style */
+#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-swimlane .ghx-key {
+    bottom: 5px;
+    color: #555;
+    display: flex;
+    flex: 1 0 auto;
+    font-size: 10px;
+    line-height: 1;
+    margin-right: 0;
+    position: absolute;
+    right: 6px;
+    text-align: right;
+    width: auto;
+    z-index: 1;
+}
+
+/* Moves avatar icon */
+#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-issue .ghx-avatar-img {
+    bottom: 0px;
+    height: 20px;
+    position: absolute;
+    left: 0px;
+    width: 20px;
+    z-index: 2;
+}
+
+/* Increases card text area */
+#jira.ghx-sprint-support .ghx-issue .ghx-summary {
+    display: -webkit-box;
+    flex: 1 0 auto;
+    font-size: 12px;
+    max-height: 80px;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    z-index: 1;
+}
+
+/* Moves swimlane expand arrow */
+.ghx-iconfont.aui-icon.aui-icon-small.aui-iconfont-expanded {
+    margin-left: 2px;
+    margin-top: 9px;
+}
+
+/* Changes swimlane header font */
+#jira.ghx-sprint-support .ghx-swimlane-header {
+    font-size: 12px;
+    padding-left: 22px;
+}
+
+    #jira.ghx-sprint-support .ghx-swimlane-header .ghx-heading {
+        margin: 6px 0;
+    }
+
+        #jira.ghx-sprint-support .ghx-swimlane-header .ghx-heading span {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+
+/* Removes strikeout on done tasks */
+#jira.ghx-sprint-support:not(.ghx-mode-planning) .js-issue.ghx-done .ghx-key {
+    text-decoration: none;
+}
+
+
+/* Change swimlane background, Hides the spacing between columns  */
+#jira.ghx-sprint-support .ghx-swimlane {
+    background: #f4f5f7;
+}
+
+/* Gives columns min width and a separator */
+#jira.ghx-sprint-support .ghx-columns .ghx-column {
+    background: none;
+    border-radius: 0;
+    min-width: 121px;
+    max-width: 25%;
+    width: auto;
+    border-right: 1px solid #e6e7ed;
+    padding: 5px 4px 5px 3px;
+}
+
+
+
+/* Hides top column headers (since they'll be inside swimlanes) */
+#jira.ghx-sprint-support #ghx-column-header-group {
+    display: none;
+}
+
+#jira.ghx-sprint-support #ghx-pool {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0 !important;
+    margin-right: 14px;
+}
+
+/* Adds column headers inside swimlanes. I guess they have to be hardcoded? */
+#jira.ghx-sprint-support .ghx-column:nth-child(1):before {
+    content: "To do";
+}
+
+#jira.ghx-sprint-support .ghx-column:nth-child(2):before {
+    content: "In progress";
+}
+
+#jira.ghx-sprint-support .ghx-column:nth-child(3):before {
+    content: "PR";
+}
+
+#jira.ghx-sprint-support .ghx-column:nth-child(4):before {
+    content: "QA";
+}
+
+#jira.ghx-sprint-support .ghx-column:nth-child(5):before {
+    content: "Done";
+}
+
+    /* Reduces size of column headers so they fit inside swimlanes */
+    #jira.ghx-sprint-support .ghx-column:before {
+        color: #5e6c84;
+        font-size: 11px;
+        font-weight: normal;
+        left: 10px;
+        position: absolute;
+        top: -18px;
+    }
+    
+    /* Moves column labels down into swimlanes */
+    #jira.ghx-sprint-support .ghx-columns {
+        position: relative;
+        border-spacing: 0;
+        margin: 0;
+        padding: 20px 0 5px 15px;
+    }
+    
+
+/* Changes column width depending on # of tasks */
+#jira.ghx-sprint-support .ghx-columns {
+	table-layout: auto;
+}
+
+#jira.ghx-sprint-support .ghx-column:nth-child(5):before {
+    content: "Done";
+}
+
+/* Reduces size of column headers so they fit inside swimlanes */
+#jira.ghx-sprint-support .ghx-column:before {
+    color: #5e6c84;
+    font-size: 11px;
+    font-weight: normal;
+    left: 10px;
+    position: absolute;
+    top: -18px;
+}
+
+/* Moves column labels down into swimlanes */
+#jira.ghx-sprint-support .ghx-columns {
+    position: relative;
+    border-spacing: 0;
+    margin: 0;
+    padding: 20px 0 5px 15px;
+}
+    
+
+/* Changes column width depending on # of tasks */
+#jira.ghx-sprint-support .ghx-columns {
+	table-layout: auto;
+}
