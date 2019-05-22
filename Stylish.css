@@ -103,11 +103,12 @@ body:not(.adg3) .ghx-column-headers .ghx-column,
 #jira.ghx-sprint-support #ghx-board-name,
 #jira.ghx-sprint-support #ghx-header .ghx-sprint-goal,
 body#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-type,
-#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-issue.ghx-narrow-card .ghx-stat-fields > .ghx-row.ghx-stat-1, .ghx-field.ghx-field-icon,
+#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-issue.ghx-narrow-card .ghx-stat-fields > .ghx-row.ghx-stat-1,
 #jira.ghx-sprint-support:not(.ghx-mode-planning) #breadcrumbs-container {
     display: none;
 }
 
+.ghx-field.ghx-field-icon,
 .ghx-estimate {
     visibility: hidden;
 }
