@@ -37,6 +37,6 @@ If you wish to condense the board even more, you can uncomment the last lines of
 ```
 
 You can change the width of the cards to match your monitor by changing this line:
-```    width: 90px !important;```
+```    width: 110px !important;```
 
 After making any changes, click Save and the style is immediately applied to the board
