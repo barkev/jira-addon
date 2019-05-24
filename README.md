@@ -12,6 +12,7 @@ To use the style with Stylish:
 6. Copy the contents of Stylish.css in this repo and paste them into the Code section of Stylish
 7. Next to Applies to: on the bottom of the Stylish style page, click Specify, then change the dropdown to URLs matching the regexp
 8. Paste this into the text box next to Applies to: .\*.atlassian.net/secure/RapidBoard.jspa.\*
+9. Click Save
 
 NOTE: There should not be any slashes (\\) in the url. 
 
@@ -34,3 +35,8 @@ If you wish to condense the board even more, you can uncomment the last lines of
 	table-layout: auto;
 }*/
 ```
+
+You can change the width of the cards to match your monitor by changing this line:
+```    width: 90px !important;```
+
+After making any changes, click Save and the style is immediately applied to the board
