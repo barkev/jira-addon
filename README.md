@@ -22,6 +22,10 @@ This style assumes you have the 5 columns: To do, In progress, PR, QA, Done. If 
     content: "To do";
 }
 ```
+If you do not wish to deal with that at all, you can revert the headers by deleting everything after this line:
+```
+/* Hides top column headers (since they'll be inside swimlanes) */
+```
 
 If you wish to condense the board even more, you can uncomment the last lines of the style. This will make the columns change size depending on the number of items in them.
 ```
