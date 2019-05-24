@@ -2,8 +2,9 @@
 
 To use the style with Stylish:
 1) Download Stylish addon:
-  a) Chrome: https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe
-  b) Firefox: https://addons.mozilla.org/en-US/firefox/addon/stylish/?src=search
+Chrome: https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe
+Firefox: https://addons.mozilla.org/en-US/firefox/addon/stylish/?src=search
+
 2) Click Stylish toolbar button
 3) Click the menu button (...)
 4) Click Create New Style
