@@ -95,7 +95,6 @@ body:not(.adg3) .ghx-column-headers .ghx-column,
 
 
 /* Hides a bunch of unwanted stuff */
-#jira.ghx-sprint-support .ghx-end .aui-badge,
 #jira.ghx-sprint-support .ghx-flags,
 #jira.ghx-sprint-support .ghx-issue .ghx-highlighted-fields,
 #jira.ghx-sprint-support .ghx-move-count,
