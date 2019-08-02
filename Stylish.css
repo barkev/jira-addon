@@ -243,9 +243,10 @@ body#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-type,
 
 
 /* Hides top column headers (since they'll be inside swimlanes) */
-#jira.ghx-sprint-support #ghx-column-header-group {
+/*#jira.ghx-sprint-support #ghx-column-header-group {
     display: none;
 }
+*/
 
 #jira.ghx-sprint-support #ghx-pool {
     padding-left: 0;
