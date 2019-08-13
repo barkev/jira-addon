@@ -1,12 +1,4 @@
 
-/* give non white background-color to kanban board */
-div#ghx-pool,
-#ghx-column-header-group.ghx-fixed,
-body:not(.adg3) .ghx-column-headers .ghx-column,
-.ghx-column-headers .ghx-column, .ghx-columns .ghx-column {
-    background-color: #efefef;
-    border-color: #efefef;
-}
 
 
 /* make the card "colour" cover the whole card */
@@ -51,7 +43,7 @@ body:not(.adg3) .ghx-column-headers .ghx-column,
 	border-top: 5px solid white;
     border-bottom: 1px solid #ccc;
     background-color: #e7e7e7;
-    width: 100%;
+    width: 97.5%;
 }
 
 /* remove white gradient from swimlanes */
@@ -90,7 +82,8 @@ body:not(.adg3) .ghx-column-headers .ghx-column,
 
 /* Makes the cursor a hand when mousing over swimlane header */
 #jira.ghx-sprint-support .ghx-swimlane-header .ghx-expander {
-	width: 100%;
+	width: 80%;
+    border-right: 1px solid #ddd;
 }
 
 
@@ -145,7 +138,7 @@ body#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-type,
     justify-content: space-between;
     margin: 4px;
     padding: 4px 6px 4px 8px;
-    width: 110px !important;
+    width: 100px !important;
 }
 
     #jira.ghx-sprint-support .ghx-issue.ui-sortable-helper {
@@ -201,7 +194,6 @@ body#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-type,
     margin-left: 2px;
     margin-top: 9px;
 }
-
 /* Changes swimlane header font */
 #jira.ghx-sprint-support .ghx-swimlane-header {
     font-size: 12px;
@@ -224,10 +216,6 @@ body#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-type,
 }
 
 
-/* Change swimlane background, Hides the spacing between columns  */
-#jira.ghx-sprint-support .ghx-swimlane {
-    background: #f4f5f7;
-}
 
 /* Gives columns min width and a separator */
 #jira.ghx-sprint-support .ghx-columns .ghx-column {
@@ -236,64 +224,10 @@ body#jira.ghx-sprint-support:not(.ghx-mode-planning) .ghx-type,
     min-width: 121px;
     max-width: 25%;
     width: auto;
-    border-right: 1px solid #e6e7ed;
-    padding: 5px 4px 5px 3px;
+    border-left: 1px solid #e6e7ed;
+    padding: 0px 0px 2px 3px;
 }
 
-
-
-/* Hides top column headers (since they'll be inside swimlanes) */
-/*#jira.ghx-sprint-support #ghx-column-header-group {
-    display: none;
-}
-*/
-
-#jira.ghx-sprint-support #ghx-pool {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0 !important;
-    margin-right: 14px;
-}
-
-/* Adds column headers inside swimlanes. I guess they have to be hardcoded? */
-#jira.ghx-sprint-support .ghx-column:nth-child(1):before {
-    content: "To do";
-}
-
-#jira.ghx-sprint-support .ghx-column:nth-child(2):before {
-    content: "In progress";
-}
-
-#jira.ghx-sprint-support .ghx-column:nth-child(3):before {
-    content: "PR";
-}
-
-#jira.ghx-sprint-support .ghx-column:nth-child(4):before {
-    content: "QA";
-}
-
-#jira.ghx-sprint-support .ghx-column:nth-child(5):before {
-    content: "Done";
-}
-
-    /* Reduces size of column headers so they fit inside swimlanes */
-    #jira.ghx-sprint-support .ghx-column:before {
-        color: #5e6c84;
-        font-size: 11px;
-        font-weight: normal;
-        left: 10px;
-        position: absolute;
-        top: -18px;
-    }
-    
-    /* Moves column labels down into swimlanes */
-    #jira.ghx-sprint-support .ghx-columns {
-        position: relative;
-        border-spacing: 0;
-        margin: 0;
-        padding: 20px 0 5px 15px;
-    }
-    
 
 /* Changes column width depending on # of tasks */
 /*
