@@ -17,17 +17,6 @@ To use the style with Stylish:
 NOTE: There should not be any slashes (\\) in the url. 
 
 
-This style assumes you have the 5 columns: To do, In progress, PR, QA, Done. If yours are different, you need to change the style to match that (or msg me). The lines defining the columns start with
-```
-#jira.ghx-sprint-support .ghx-column:nth-child(1):before {
-    content: "To do";
-}
-```
-If you do not wish to deal with that at all, you can revert the headers by deleting everything after this line:
-```
-/* Hides top column headers (since they'll be inside swimlanes) */
-```
-
 If you wish to condense the board even more, you can uncomment the last lines of the style. This will make the columns change size depending on the number of items in them.
 ```
 /*
