@@ -1,10 +1,10 @@
 {
-   "appDescription": {
-      "description": "The description of the application",
-      "message": "Tweak JIRA's Rapid Boards"
-   },
-   "appName": {
-      "description": "The name of the application",
-      "message": "Scrumify"
-   }
+    "appDescription": {
+        "description": "The description of the application",
+        "message": "Burnup line on Jira's CFD chart"
+    },
+    "appName": {
+        "description": "The name of the application",
+        "message": "Jira CFD Burnup"
+    }
 }

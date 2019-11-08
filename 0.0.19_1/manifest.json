@@ -1,22 +1,21 @@
 {
-   "content_scripts": [ {
-      "all_frames": false,
-      "css": [ "styles/jira.css" ],
-      "js": [ "scripts/contentscript.js" ],
-      "matches": [ "http://*.atlassian.net/*", "https://*.atlassian.net/*" ],
-      "run_at": "document_end"
-   } ],
-   "default_locale": "en",
-   "description": "__MSG_appDescription__",
-   "icons": {
-      "128": "images/icon-128.png",
-      "16": "images/icon-16.png"
-   },
-   "key": "ZIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5ceYfA1WFdrdL2VHQpwv04ksgWQ5sDHFVuiaP+tXk2HjNpgw6kICFAcrdP7+SEE6q9kn/JwJuJq4L03PkSwb+wnOMqcWG2HbIe9BGyXgO3DkXu4Sn2pFPC5/+HXJjvpSJE/1JpBTqi7ybvpt8ZKwDdoir57UoDwZylSEdclB/igaPJYrva1Gwc3ba5GT0Zwd9QPRR5/9wTEql4mL0JviHMyuAA3aEu1wKRho+Oqk4jOJBbjF86dsVBcp8Ezmj3ynYjrwBR0qrCVsmbgPd6uvtALNU/OELttOElUi/OSwDjNzlZb5vyuSF2e1Qkm+S/dZ60zxvo0dkh1+D8++tnmkyQIDAQAB",
-   "manifest_version": 2,
-   "name": "__MSG_appName__",
-   "permissions": [ "http://*.atlassian.net/*", "https://*.atlassian.net/*" ],
-   "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "0.0.19",
-   "web_accessible_resources": [ "scripts/script.js" ]
+    "content_scripts": [{
+        "all_frames": false,
+        "js": ["scripts/contentscript.js"],
+        "matches": ["http://*.atlassian.net/*", "https://*.atlassian.net/*"],
+        "run_at": "document_end"
+    }],
+    "default_locale": "en",
+    "description": "__MSG_appDescription__",
+    "icons": {
+        "128": "images/icon-128.png",
+        "16": "images/icon-16.png"
+    },
+    "key": "ZIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5ceYfA1WFdrdL2VHQpwv04ksgWQ5sDHFVuiaP+tXk2HjNpgw6kICFAcrdP7+SEE6q9kn/JwJuJq4L03PkSwb+wnOMqcWG2HbIe9BGyXgO3DkXu4Sn2pFPC5/+HXJjvpSJE/1JpBTqi7ybvpt8ZKwDdoir57UoDwZylSEdclB/igaPJYrva1Gwc3ba5GT0Zwd9QPRR5/9wTEql4mL0JviHMyuAA3aEu1wKRho+Oqk4jOJBbjF86dsVBcp8Ezmj3ynYjrwBR0qrCVsmbgPd6uvtALNU/OELttOElUi/OSwDjNzlZb5vyuSF2e1Qkm+S/dZ60zxvo0dkh1+D8++tnmkyQIDAQAB",
+    "manifest_version": 2,
+    "name": "__MSG_appName__",
+    "permissions": ["http://*.atlassian.net/*", "https://*.atlassian.net/*"],
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "0.0.19",
+    "web_accessible_resources": ["scripts/script.js"]
 }
