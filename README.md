@@ -1,5 +1,15 @@
 # jira-addon
 
+To use the addon to display a burnup line on the CFD:
+1. Go to chrome://extensions/
+2. Put "Developer Mode" slider on the top right into enabled mode
+3. Click Load Unpacked on the top left
+4. Browse to the git folder, select 0.0.19_1 folder
+5. Check the CFD graph 
+
+
+# CSS Style for Jira Sprint Board
+
 To use the style with Stylish:
 1. Download Stylish addon
    - for Chrome: https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe
