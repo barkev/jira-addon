@@ -56,7 +56,8 @@
 
 /* hide not so useful icons */
 .ghx-issue .ghx-field-icon[data-tooltip="Task"],
-.ghx-issue .ghx-field-icon[data-tooltip="Medium priority"] {
+.ghx-issue .ghx-field-icon[data-tooltip="Medium priority"],
+.ghx-extra-fields {
     display: none;
 }
 
